@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://localhost/examen06/servidorSoap/servicio.php" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="Clases.OperacionesExamen6" targetNamespace="http://localhost/examen06/servidorSoap/servicio.php">
+  <types>
+    <xsd:schema targetNamespace="http://localhost/examen06/servidorSoap/servicio.php">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+    </xsd:schema>
+  </types>
+  <portType name="Clases.OperacionesExamen6Port">
+    <operation name="getPosicion">
+      <documentation>Devuelve un array con los nombres completos de los jugadores
+
+que tienen la posici&#xF3;n indicada (Portero, Defensa, ...).</documentation>
+      <input message="tns:getPosicionIn"/>
+      <output message="tns:getPosicionOut"/>
+    </operation>
+  </portType>
+  <binding name="Clases.OperacionesExamen6Binding" type="tns:Clases.OperacionesExamen6Port">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getPosicion">
+      <soap:operation soapAction="http://localhost/examen06/servidorSoap/servicio.php#getPosicion"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/examen06/servidorSoap/servicio.php"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/examen06/servidorSoap/servicio.php"/>
+      </output>
+    </operation>
+  </binding>
+  <message name="getPosicionIn">
+    <part name="posicion" type="xsd:string"/>
+  </message>
+  <message name="getPosicionOut">
+    <part name="return" type="soap-enc:Array"/>
+  </message>
+  <service name="Clases.OperacionesExamen6Service">
+    <port name="Clases.OperacionesExamen6Port" binding="tns:Clases.OperacionesExamen6Binding">
+      <soap:address location="http://localhost/examen06/servidorSoap/servicio.php"/>
+    </port>
+  </service>
+</definitions>

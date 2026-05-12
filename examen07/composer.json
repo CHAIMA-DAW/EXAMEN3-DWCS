@@ -1,0 +1,19 @@
+{
+    "name": "david/tarea7",
+    "autoload": {
+        "psr-4": {
+            "Clases\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "David García Cancio",
+            "email": "davidgaca@iesrodeira.gal"
+        }
+    ],   
+    "require": {
+        "jaxon-php/jaxon-core": "~4.0",
+        "jaxon-php/jaxon-js": "*",
+        "yepsua/jquery4php": "~4.0"
+    }
+}
