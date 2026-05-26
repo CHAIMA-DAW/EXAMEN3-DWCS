@@ -15,7 +15,7 @@ class OperacionesExamen6
         $user = "admin06";
         $pass = "secreto";
 
-        $dsn = "mysql:host=localhost;port=3307;dbname=examen06;charset=utf8mb4";
+        $dsn = "mysql:host=localhost;port=3306;dbname=examen06;charset=utf8mb4";
 
         try {
             $this->con = new PDO($dsn, $user, $pass);
@@ -41,7 +41,7 @@ public function getPosicion(string $posicion): array
 
     $stmt = $this->con->prepare($sql);
     $stmt->execute([':p' => $posicion]);
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $stmt->fetchAll(PDO::FETCH_COLUMN);
 }
 
 }

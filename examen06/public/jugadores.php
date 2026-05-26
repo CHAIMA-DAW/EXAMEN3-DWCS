@@ -4,6 +4,7 @@ error_reporting(E_ALL & ~E_DEPRECATED);
 session_start();
 require '../vendor/autoload.php';
 
+use Clases\Clases1\ClasesOperacionesExamen6Service;
 use Clases\Jugadores;
 use Milon\Barcode\DNS1D;
 use Philo\Blade\Blade;
@@ -25,8 +26,8 @@ if (isset($_GET['pos'])) {
     $posSeleccionada = $_GET['pos'];
 
     // Cliente SOAP generado
-    $wsdl = 'http://localhost/examen06/servidorSoap/servicio.wsdl';
-    $clienteSoap = new ClasesOperacionesExamen6Service($wsdl);
+    $wsdl = 'http://corrige.localhost/examen06/servidorSoap/servicio.wsdl';
+    $clienteSoap = new ClasesOperacionesExamen6Service([], $wsdl);
 
     // Llamamos a getPosicion del servicio
     $listaPosicion = $clienteSoap->getPosicion($posSeleccionada);

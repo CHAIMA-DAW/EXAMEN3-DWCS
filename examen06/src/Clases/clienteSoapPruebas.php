@@ -3,19 +3,20 @@
 
 error_reporting(E_ALL & ~E_DEPRECATED);
 
-require __DIR__  . '/vendor/autoload.php';
+require __DIR__  . '/../../vendor/autoload.php';
 
 use Clases\Clases1\ClasesOperacionesExamen6Service;
 
 // URL del WSDL
-$wsdl = 'http://localhost/examen06/servidorSoap/servicio.wsdl';
+$wsdl = 'http://corrige.localhost/examen06/servidorSoap/servicio.wsdl';
 
 // Creamos el cliente generado a partir del WSDL
 $cliente = new ClasesOperacionesExamen6Service([],$wsdl);
 
 
 echo "Introduce una posición (Portero, Defensa, Lateral Izquierdo, Lateral Derecho, Central, Delantero): ";
-$posicion = trim(fgets(STDIN));
+// $posicion = trim(fgets(STDIN));
+$posicion = "Portero"; // Para pruebas, puedes cambiar esta posición según lo que quieras probar
 
 // Llamamos a la operación getPosicion del servicio
 try {
