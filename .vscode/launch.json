@@ -5,6 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://corrige.localhost/${relativeFile}",
+            "webRoot": "${workspaceFolder}"
+        },
+        
+        {
             "name": "Listen for Xdebug",
             "type": "php",
             "request": "launch",

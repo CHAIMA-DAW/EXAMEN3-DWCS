@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitdb751d7d85ba0eb249d9f8d24b0542d3
+class ComposerStaticInit80c2e4e5a57d0459ccdc395c49ac34ed
 {
     public static $files = array (
         '800196073909aa5a35e71b8a8265de59' => __DIR__ . '/..' . '/jaxon-php/jaxon-core/src/start.php',
@@ -100,10 +100,10 @@ class ComposerStaticInitdb751d7d85ba0eb249d9f8d24b0542d3
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitdb751d7d85ba0eb249d9f8d24b0542d3::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitdb751d7d85ba0eb249d9f8d24b0542d3::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitdb751d7d85ba0eb249d9f8d24b0542d3::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitdb751d7d85ba0eb249d9f8d24b0542d3::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit80c2e4e5a57d0459ccdc395c49ac34ed::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit80c2e4e5a57d0459ccdc395c49ac34ed::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit80c2e4e5a57d0459ccdc395c49ac34ed::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit80c2e4e5a57d0459ccdc395c49ac34ed::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'david/tarea7',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '9c3b4610b8be89fdbe20e02ef6a67772328e329b',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'david/tarea7' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '9c3b4610b8be89fdbe20e02ef6a67772328e329b',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -155,9 +155,9 @@
             'dev_requirement' => false,
         ),
         'yepsua/jquery4php' => array(
-            'pretty_version' => '1.7.x-dev',
-            'version' => '1.7.9999999.9999999-dev',
-            'reference' => 'c2aff5711b64bb6aeaf56bfa3c336ce7e8610689',
+            'pretty_version' => 'v1.7.0',
+            'version' => '1.7.0.0',
+            'reference' => 'fedff0be025bc2dca738151df96c6d8057cceb70',
             'type' => 'library',
             'install_path' => __DIR__ . '/../yepsua/jquery4php',
             'aliases' => array(),

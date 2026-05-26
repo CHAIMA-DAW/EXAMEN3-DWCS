@@ -38,7 +38,7 @@
             },
             "time": "2025-12-07T16:50:57+00:00",
             "type": "library",
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "files": [
                     "src/start.php"
@@ -100,7 +100,7 @@
             },
             "time": "2026-04-20T17:50:13+00:00",
             "type": "library",
-            "installation-source": "source",
+            "installation-source": "dist",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
@@ -164,7 +164,7 @@
             },
             "time": "2023-08-04T14:07:16+00:00",
             "type": "library",
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Jaxon\\Utils\\": "src/"
@@ -233,7 +233,7 @@
                     "dev-master": "1.8-dev"
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Nyholm\\Psr7\\": "src/"
@@ -302,7 +302,7 @@
             },
             "time": "2023-11-08T09:30:43+00:00",
             "type": "library",
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Nyholm\\Psr7Server\\": "src/"
@@ -373,7 +373,7 @@
                     "dev-master": "3.x-dev"
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-0": {
                     "Pimple": "src/"
@@ -425,7 +425,7 @@
                     "dev-master": "2.0.x-dev"
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Psr\\Container\\": "src/"
@@ -482,7 +482,7 @@
                     "dev-master": "1.0.x-dev"
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Psr\\Http\\Message\\": "src/"
@@ -539,7 +539,7 @@
                     "dev-master": "2.0.x-dev"
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Psr\\Http\\Message\\": "src/"
@@ -714,7 +714,7 @@
                     "dev-master": "3.x-dev"
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Psr\\Log\\": "src"
@@ -767,7 +767,7 @@
             },
             "time": "2025-11-20T14:34:30+00:00",
             "type": "library",
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-0": {
                     "JShrink": "src/"
@@ -807,25 +807,25 @@
         },
         {
             "name": "yepsua/jquery4php",
-            "version": "1.7.x-dev",
-            "version_normalized": "1.7.9999999.9999999-dev",
+            "version": "v1.7.0",
+            "version_normalized": "1.7.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oyepez003/jQuery4PHP.git",
-                "reference": "c2aff5711b64bb6aeaf56bfa3c336ce7e8610689"
+                "reference": "fedff0be025bc2dca738151df96c6d8057cceb70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oyepez003/jQuery4PHP/zipball/c2aff5711b64bb6aeaf56bfa3c336ce7e8610689",
-                "reference": "c2aff5711b64bb6aeaf56bfa3c336ce7e8610689",
+                "url": "https://api.github.com/repos/oyepez003/jQuery4PHP/zipball/fedff0be025bc2dca738151df96c6d8057cceb70",
+                "reference": "fedff0be025bc2dca738151df96c6d8057cceb70",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "2015-03-17T20:39:56+00:00",
+            "time": "2015-03-17T20:34:39+00:00",
             "type": "library",
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "files": [
                     "YepSua/Labs/RIA/jQuery4PHP/jquery4php_required.php"
@@ -853,8 +853,9 @@
             ],
             "support": {
                 "issues": "https://github.com/oyepez003/jQuery4PHP/issues",
-                "source": "https://github.com/oyepez003/jQuery4PHP/tree/1.7"
+                "source": "https://github.com/oyepez003/jQuery4PHP/tree/1.7.0"
             },
+            "abandoned": true,
             "install-path": "../yepsua/jquery4php"
         }
     ],

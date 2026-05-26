@@ -12,14 +12,15 @@ $usu = $_SESSION['usu'];
 spl_autoload_register(function ($clase) {
     include "../include/" . $clase . ".php";
 });
-require __DIR__. '/../include/votar.php'; // carga $jaxon
+require __DIR__ . '/../include/Votar.php'; // carga $jaxon
 
 $productos = new Producto();
 $todos     = $productos->listadoProductos();
 $productos = null;
 $jaxonJs = $jaxon->getScript();
 
-function pintarEstrellasPagina($p)  {
+function pintarEstrellasPagina($p)
+{
     $votos     = new Voto();
     $c         = $votos->getMedia($p);
     $en        = intval($c);
@@ -42,12 +43,12 @@ function pintarEstrellasPagina($p)  {
 }
 
 // Preparamos Jaxon:
-require (__DIR__ . '/../include/Votar.php');
+// require (__DIR__ . '/../include/Votar.php');
 
 use function Jaxon\jaxon;
 
 // Procesar la solicitud
-if($jaxon->canProcessRequest())  $jaxon->processRequest();
+if ($jaxon->canProcessRequest())  $jaxon->processRequest();
 
 ?>
 
@@ -75,46 +76,47 @@ if($jaxon->canProcessRequest())  $jaxon->processRequest();
     <br>
     <h4 class="container text-center mt-4 font-weight-bold">Productos onLine</h4>
     <div class="container mt-3">
-    <button type="button" onclick="jaxon_masVotados();" class="btn btn-info">
-        Más votados
-    </button>
-    <div id="masVotados" class = "mt-3"style="margin-top:10px;"></div>
-    <br><br>
+        <button type="button" onclick="jaxon_masVotados();" class="btn btn-info">
+            Más votados
+        </button>
+        <div id="masVotados" class="mt-3" style="margin-top:10px;"></div>
+        <br><br>
         <table border="1" cellpadding="5" cellspacing="0">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Nombre corto</th>
-                <th>PVP</th>
-                <th>Votar</th>
-                <th>Valoración</th>
-            </tr>
-        </thead>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Nombre corto</th>
+                    <th>PVP</th>
+                    <th>Votar</th>
+                    <th>Valoración</th>
+                </tr>
+            </thead>
             <tbody>
                 <?php foreach ($todos as $p): ?>
-            <tr id="fila_<?php echo $p->id; ?>">
-                <td><?php echo htmlspecialchars($p->nombre); ?></td>
-                <td><?php echo htmlspecialchars($p->nombre_corto); ?></td>
-                <td><?php echo number_format($p->pvp, 2); ?> €</td>
-                <td>
-                    <select id="spuntos_<?php echo $p->id; ?>">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3" selected>3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                    <button type="button"
-                            onclick="envVoto('<?php echo $usu; ?>', <?php echo $p->id; ?>);">
-                        Votar
-                    </button>
-                </td>
-                <td id="votos<?php echo $p->id; ?>"></td>
-                </tr>
+                    <tr id="fila_<?php echo $p['id']; ?>">
+                        <td><?php echo htmlspecialchars($p['nombre']); ?></td>
+                        <td><?php echo htmlspecialchars($p['nombre_corto']); ?></td>
+                        <td><?php echo number_format($p['pvp'], 2); ?> €</td>
+                        <td>
+                            <select id="spuntos_<?php echo $p['id']; ?>">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3" selected>3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <button type="button"
+                                onclick="envVoto('<?php echo $usu; ?>', <?php echo $p['id']; ?>);">
+                                Votar
+                            </button>
+                        </td>
+                        <td id="votos<?php echo $p['id']; ?>"></td>
+                    </tr>
                 <?php endforeach; ?>
             </tbody>
-            </table>
-            <table class="table table-striped table-dark">
+        </table>
+        <!--
+        <table class="table table-striped table-dark">
             <thead>
                 <tr>
                     <th scope="col" class='text-center'>Código</th>
@@ -125,27 +127,32 @@ if($jaxon->canProcessRequest())  $jaxon->processRequest();
             </thead>
             <tbody>
                 <?php
-                while ($item = $todos->fetch(PDO::FETCH_OBJ)) {
-                    echo "<tr class='text-center'>\n";
-                    echo "<th scope='row'>{$item->id}</th>\n";
-                    echo "<td>{$item->nombre}</td>\n";
-                    echo "<td><div id='votos_{$item->id}' class='float-left'>";
-                    echo pintarEstrellasPagina($item->id);
-                    echo "</div> </td>\n";
-                    echo "<td><select name='puntos' class='form-control' id='spuntos_{$item->id}'>";
-                    for ($i = 1; $i <= 5; $i++) {
-                        echo "<option>$i</option>\n";
-                    }
-                    echo "</select>\n";
-                    echo "</td><td>";
-                    echo "<button class='btn btn-info' onclick=\"envVoto('{$usu}','{$item->id}')\">Votar</button>";
-                    echo "</td>\n";
-                    echo "</tr>\n";
-                }
+                // while ($item = $todos->fetch(PDO::FETCH_OBJ)) {
+                //     echo "<tr class='text-center'>\n";
+                //     echo "<th scope='row'>{$item->id}</th>\n";
+                //     echo "<td>{$item->nombre}</td>\n";
+                //     echo "<td><div id='votos_{$item->id}' class='float-left'>";
+                //     echo pintarEstrellasPagina($item->id);
+                //     echo "</div> </td>\n";
+                //     echo "<td><select name='puntos' class='form-control' id='spuntos_{$item->id}'>";
+                //     for ($i = 1; $i <= 5; $i++) {
+                //         echo "<option>$i</option>\n";
+                //     }
+                //     echo "</select>\n";
+                //     echo "</td><td>";
+                //     echo "<button class='btn btn-info' onclick=\"envVoto('{$usu}','{$item->id}')\">Votar</button>";
+                //     echo "</td>\n";
+                //     echo "</tr>\n";
+                // }
                 ?>
-            </tbody>
+            </tbody> -->
         </table>
-        <?php echo $jaxonJs; ?>
-    <script src="votar.js"></script>
+        <!-- <?php echo $jaxonJs; ?> -->
+        <script src="votar.js"></script>
 </body>
+<?php
+$jaxon = jaxon();
+echo $jaxon->getCss(), "\n", $jaxon->getJs(), "\n", $jaxon->getScript(), "\n";
+echo "<!-- HTTP comment  -->\n"
+?>
 </html>

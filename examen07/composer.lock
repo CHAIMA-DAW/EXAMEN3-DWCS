@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7f3e035c0e99da592eb90b3ffcabceeb",
+    "content-hash": "80c2e4e5a57d0459ccdc395c49ac34ed",
     "packages": [
         {
             "name": "jaxon-php/jaxon-core",
@@ -774,16 +774,16 @@
         },
         {
             "name": "yepsua/jquery4php",
-            "version": "1.7.x-dev",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oyepez003/jQuery4PHP.git",
-                "reference": "c2aff5711b64bb6aeaf56bfa3c336ce7e8610689"
+                "reference": "fedff0be025bc2dca738151df96c6d8057cceb70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oyepez003/jQuery4PHP/zipball/c2aff5711b64bb6aeaf56bfa3c336ce7e8610689",
-                "reference": "c2aff5711b64bb6aeaf56bfa3c336ce7e8610689",
+                "url": "https://api.github.com/repos/oyepez003/jQuery4PHP/zipball/fedff0be025bc2dca738151df96c6d8057cceb70",
+                "reference": "fedff0be025bc2dca738151df96c6d8057cceb70",
                 "shasum": ""
             },
             "require": {
@@ -817,17 +817,16 @@
             ],
             "support": {
                 "issues": "https://github.com/oyepez003/jQuery4PHP/issues",
-                "source": "https://github.com/oyepez003/jQuery4PHP/tree/1.7"
+                "source": "https://github.com/oyepez003/jQuery4PHP/tree/1.7.0"
             },
-            "time": "2015-03-17T20:39:56+00:00"
+            "abandoned": true,
+            "time": "2015-03-17T20:34:39+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "yepsua/jquery4php": 20
-    },
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {},
