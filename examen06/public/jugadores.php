@@ -26,7 +26,7 @@ if (isset($_GET['pos'])) {
     $posSeleccionada = $_GET['pos'];
 
     // Cliente SOAP generado
-    $wsdl = 'http://corrige.localhost/examen06/servidorSoap/servicio.wsdl';
+    $wsdl = 'http://localhost/examen06/servidorSoap/servicio.wsdl';
     $clienteSoap = new ClasesOperacionesExamen6Service([], $wsdl);
 
     // Llamamos a getPosicion del servicio

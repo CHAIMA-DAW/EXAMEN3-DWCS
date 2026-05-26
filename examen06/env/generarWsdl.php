@@ -6,7 +6,7 @@ use PHP2WSDL\PHPClass2WSDL;
 
 $class = 'Clases\OperacionesExamen6';
 
-$uri = 'http://corrige.localhost/examen06/servidorSoap/servicio.php';
+$uri = 'http://localhost/examen06/servidorSoap/servicio.php';
 
 if (!class_exists($class)) {
     die("Error: la clase $class no se pudo cargar. Revisa namespaces y composer dump-autoload.");

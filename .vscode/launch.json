@@ -8,7 +8,7 @@
             "name": "Launch Chrome",
             "request": "launch",
             "type": "chrome",
-            "url": "http://corrige.localhost/${relativeFile}",
+            "url": "http://localhost/${relativeFile}",
             "webRoot": "${workspaceFolder}"
         },
         
